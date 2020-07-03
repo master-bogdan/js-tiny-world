@@ -38,12 +38,21 @@ class Inhabitant {
 
 
 let diver = new Inhabitant('Human', 'img/diver.png', 'Amelia', "Divers don't have genders", 'Dive, Eat, sleep <= repeat', 'voices/diver.mp3');
+
+let clownfish = new Inhabitant('Fish', 'img/clownfish.jpg', 'Sharik', 'Male and then can be Female', 'Secure anemone', 'silence');
+
+let dolphin = new Inhabitant('Mammal', 'img/dolphin.jpg', 'Luna', 'Female', 'Every time play with something', 'voices/dolphin.mp3');
+
+let shark = new Inhabitant('Fish', 'img/shark.png', 'Bruce', 'Male', 'Scare and eat everythink', 'voices/shark.mp3');
+
+let napoleon = new Inhabitant('fish', 'img/napoleon.png', 'Freddy', 'Male', 'Eat egs and run away', 'Silence');
+
+napoleon.render();
+shark.render();
+clownfish.render();
 diver.render();
-let dog = new Inhabitant('Animal - Dog', '', 'Sharik', 'Male', 'Secure house, Eat, Woof', 'Woof! Woof, woff, woff!!!');
-// dog.render();
-let man = new Inhabitant('Human - Man', '', 'John', 'Male', 'Programmer', 'Hello World!');
-let woman = new Inhabitant('Human - Woman', '', 'Lizz', 'Female', 'Just Awesome Girl', '...talking every time with girlfriends');
-let catWoman = new Inhabitant('Human / Animal', '', 'undefined', 'Female', 'World saving and Meov!', 'Hello meov! Urrrrrr');
+dolphin.render();
+
 
 
 const sound = document.querySelectorAll('.audio');
