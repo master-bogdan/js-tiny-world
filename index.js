@@ -11,21 +11,21 @@ class Inhabitant {
         this.saying = saying;
     }
     render() {
-        let row = document.querySelector('.row');
+        const row = document.querySelector('.row');
         row.insertAdjacentHTML('afterbegin', `
         <div class="col col-md-6">
             <div class="card">
                 <h3 class="card-title">${this.name}</h3>
                 <img src=${this.image} alt="${this.name}">
-                <p>Inhabitant: ${this.type}</p>
-                <p>Gender: ${this.gender}</p>
-                <p>Ocupation: ${this.ocupation}</p>
+                <p>Inhabitant: <span>${this.type}</span></p>
+                <p>Gender: <span>${this.gender}</span></p>
+                <p>Ocupation: <span>${this.ocupation}</span></p>
+                Press to hear underwater voice
                 <audio class="audio" controls>
+                Press to hear underwater voice
                     <source src="${this.saying}" type="audio/mpeg">
                 </audio>
-                <ul class="card-actions">
-                    <li><button type="button" class="button-primary card-btn">Press to hear underwater voice</button></li>
-                </ul>
+                <button type="button" class="button-primary card-btn">Press to hear underwater voice</button>
             </div>
         </div>
         `);
@@ -45,7 +45,7 @@ let dolphin = new Inhabitant('Mammal', 'img/dolphin.jpg', 'Luna', 'Female', 'Eve
 
 let shark = new Inhabitant('Fish', 'img/shark.png', 'Bruce', 'Male', 'Scare and eat everythink', 'voices/shark.mp3');
 
-let napoleon = new Inhabitant('fish', 'img/napoleon.png', 'Freddy', 'Male', 'Eat egs and run away', 'Silence');
+let napoleon = new Inhabitant('Fish', 'img/napoleon.png', 'Freddy', 'Male', 'Eat egs and run away', 'silence');
 
 napoleon.render();
 shark.render();
@@ -53,23 +53,30 @@ clownfish.render();
 diver.render();
 dolphin.render();
 
-
-
 const sound = document.querySelectorAll('.audio');
+
+let soundIndex = Array.from(sound).map((item, index) => {
+    return index;
+});
+console.log(soundIndex);
+    
 function playVoice() {
-    this.sound.play();
-    // try {
-    //     await sound.play();
-    //   } catch(err) {
-    //     console.log('error');
-    //   }
+    
 }
 
 const buttonPlay = document.querySelectorAll('.card-btn');
+let buttonIndex = Array.from(buttonPlay).map((item, index) => {
+    return index;
+});
+console.log(buttonIndex);
 
 
-buttonPlay.forEach(item => {
-    item.addEventListener('click', playVoice);
+buttonPlay.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        // console.log(e.currentTarget =);
+        soundIndex = e.currentTarget;
+        soundIndex.play(); 
+    });
 });
 
 

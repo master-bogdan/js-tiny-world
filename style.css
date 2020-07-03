@@ -1,3 +1,7 @@
+* {
+    font-family: monospace;
+}
+
 #main {
     background: url(./img/5-surprising-facts-about-coral-reefs.jpg) fixed center/cover no-repeat;
 }
@@ -10,4 +14,44 @@ img {
 header {
     background: -webkit-linear-gradient(to bottom, #B2FEFA, #0ED2F7);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #B2FEFA, #0ED2F7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+    font-weight: bold;
+}
+
+span {
+    font-family: monospace;
+    font-weight: normal;
+}
+
+audio {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: url(./img/footer_bg.jpg) no-repeat;
+    background-size: 100% auto; */
+    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+footer ul {
+    width: 100px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.link_item {
+    display: block;
+}
+
+.link_item img {
+    width: 40px;
+    /* background: white; */
 }
