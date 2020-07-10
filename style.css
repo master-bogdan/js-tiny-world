@@ -1,9 +1,15 @@
 * {
     font-family: monospace;
+    scroll-behavior: smooth;
 }
 
 #main {
     background: url(./img/5-surprising-facts-about-coral-reefs.jpg) fixed center/cover no-repeat;
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 img {
@@ -54,4 +60,13 @@ footer ul {
 .link_item img {
     width: 40px;
     /* background: white; */
+}
+
+@keyframes fadeout {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

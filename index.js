@@ -1,4 +1,3 @@
-// catch, dog, man, woman, cat-woman
 window.addEventListener('DOMContentLoaded', () => {
 
 class Inhabitant {
@@ -20,21 +19,16 @@ class Inhabitant {
                 <p>Inhabitant: <span>${this.type}</span></p>
                 <p>Gender: <span>${this.gender}</span></p>
                 <p>Ocupation: <span>${this.ocupation}</span></p>
-                Press to hear underwater voice
+                Press play to hear underwater voice
                 <audio class="audio" controls>
                 Press to hear underwater voice
                     <source src="${this.saying}" type="audio/mpeg">
                 </audio>
-                <button type="button" class="button-primary card-btn">Press to hear underwater voice</button>
             </div>
         </div>
         `);
     }
 }
-
-
-
-
 
 
 let diver = new Inhabitant('Human', 'img/diver.png', 'Amelia', "Divers don't have genders", 'Dive, Eat, sleep <= repeat', 'voices/diver.mp3');
@@ -53,32 +47,14 @@ clownfish.render();
 diver.render();
 dolphin.render();
 
-const sound = document.querySelectorAll('.audio');
+let startBtn = document.getElementById('start');
+let main = document.getElementById('main');
 
-let soundIndex = Array.from(sound).map((item, index) => {
-    return index;
-});
-console.log(soundIndex);
-    
-function playVoice() {
-    
+
+function start() {
+    main.style.cssText = `display: block; animation: fadeout 2s`;
 }
 
-const buttonPlay = document.querySelectorAll('.card-btn');
-let buttonIndex = Array.from(buttonPlay).map((item, index) => {
-    return index;
-});
-console.log(buttonIndex);
-
-
-buttonPlay.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        // console.log(e.currentTarget =);
-        soundIndex = e.currentTarget;
-        soundIndex.play(); 
-    });
-});
-
-
+startBtn.addEventListener('click', start);
 
 });
