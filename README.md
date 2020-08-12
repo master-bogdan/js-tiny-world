@@ -2,7 +2,7 @@
 =============
 
 This app for JS OOP training  
-This is model for tiny underwater JS world [DEMO](https://master-bogdan.github.io/js-tiny-world/)
+This is model for tiny underwater JS world - [[DEMO](https://master-bogdan.github.io/js-tiny-world/)]
 
 ### Technologies used
 - HTML5
